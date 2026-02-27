@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy – ThreadConnect</title>
+    <style>
+        :root {
+            --primary: #1a73e8;
+            --bg: #f8f9fa;
+            --card: #ffffff;
+            --text: #202124;
+            --text-secondary: #5f6368;
+            --border: #dadce0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+        }
+        header {
+            background: var(--card);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+        }
+        .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+        nav { display: flex; align-items: center; justify-content: space-between; }
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
+        .logo svg { width: 28px; height: 28px; }
+        .logo span { font-size: 18px; font-weight: 600; }
+        nav a { color: var(--text-secondary); text-decoration: none; font-size: 14px; margin-left: 24px; }
+        nav a:hover { color: var(--primary); }
+        .content {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 48px 40px;
+            margin: 40px auto;
+        }
+        h1 { font-size: 32px; margin-bottom: 8px; }
+        .date { color: var(--text-secondary); font-size: 14px; margin-bottom: 32px; }
+        h2 { font-size: 20px; margin: 32px 0 12px; color: var(--text); }
+        p { margin-bottom: 16px; font-size: 15px; color: var(--text-secondary); }
+        ul { margin: 0 0 16px 24px; }
+        li { font-size: 15px; color: var(--text-secondary); margin-bottom: 6px; }
+        a { color: var(--primary); }
+        footer {
+            text-align: center;
+            padding: 24px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <a class="logo" href="index.html">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                <span>ThreadConnect</span>
+            </a>
+            <div>
+                <a href="index.html">Home</a>
+                <a href="terms.html">Terms</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <div class="content">
+        <h1>Privacy Policy</h1>
+        <p class="date">Effective date: February 26, 2026</p>
+
+        <h2>1. Introduction</h2>
+        <p>ThreadConnect ("the Add-on") is a Gmail add-on developed by Juan Olivar ("we", "us", "our"). This Privacy Policy explains how we handle information when you use ThreadConnect.</p>
+
+        <h2>2. Information We Access</h2>
+        <p>ThreadConnect requests the following Gmail permissions solely to provide its core functionality:</p>
+        <ul>
+            <li><strong>Read email metadata and content</strong> – to extract subject-line IDs and message bodies from the thread you are currently viewing.</li>
+            <li><strong>Search your mailbox</strong> – to find the output thread that shares the same ID.</li>
+            <li><strong>Send replies on your behalf</strong> – to forward the matched content and selected attachments to the output thread via reply-all.</li>
+        </ul>
+
+        <h2>3. Data Storage</h2>
+        <ul>
+            <li><strong>Templates</strong> are stored in your personal Google Apps Script User Properties. Only you can access them; they are tied to your Google account.</li>
+            <li><strong>Rate-limiting counters</strong> are stored temporarily in Google Apps Script Cache Service and expire automatically.</li>
+        </ul>
+
+        <h2>4. Data We Do NOT Collect</h2>
+        <p>We do <strong>not</strong>:</p>
+        <ul>
+            <li>Collect, store, or transmit your email content, attachments, or personal data to any external server.</li>
+            <li>Use analytics, tracking pixels, or third-party services.</li>
+            <li>Share any information with third parties.</li>
+            <li>Store or log email addresses, names, or any personally identifiable information.</li>
+        </ul>
+
+        <h2>5. No External Servers</h2>
+        <p>ThreadConnect runs entirely within Google's infrastructure (Google Apps Script). No data ever leaves your Google account. There are no external API calls, databases, or servers involved.</p>
+
+        <h2>6. Data Retention</h2>
+        <p>Templates persist in your User Properties until you delete them. Cache entries (rate-limit counters, duplicate-send guards) expire automatically within 60 seconds. No other data is retained.</p>
+
+        <h2>7. Your Rights</h2>
+        <p>You can:</p>
+        <ul>
+            <li>Delete any saved template at any time from within the add-on.</li>
+            <li>Revoke the add-on's access at any time via <a href="https://myaccount.google.com/permissions" target="_blank">Google Account Permissions</a>.</li>
+            <li>Uninstall the add-on from the Google Workspace Marketplace.</li>
+        </ul>
+
+        <h2>8. Children's Privacy</h2>
+        <p>ThreadConnect is not directed at children under 13. We do not knowingly collect information from children.</p>
+
+        <h2>9. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Changes will be reflected on this page with an updated effective date.</p>
+
+        <h2>10. Contact</h2>
+        <p>If you have questions about this Privacy Policy, contact us at:<br>
+        <a href="mailto:juanjolivares@gmail.com">juanjolivares@gmail.com</a></p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 ThreadConnect by Juan Olivar</p>
+</footer>
+
+</body>
+</html>

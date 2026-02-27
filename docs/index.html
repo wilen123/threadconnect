@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThreadConnect – Gmail Add-on</title>
+    <style>
+        :root {
+            --primary: #1a73e8;
+            --primary-dark: #1557b0;
+            --bg: #f8f9fa;
+            --card: #ffffff;
+            --text: #202124;
+            --text-secondary: #5f6368;
+            --border: #dadce0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: var(--card);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+        nav { display: flex; align-items: center; justify-content: space-between; }
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
+        .logo svg { width: 32px; height: 32px; }
+        .logo span { font-size: 20px; font-weight: 600; }
+        nav a { color: var(--text-secondary); text-decoration: none; font-size: 14px; margin-left: 24px; }
+        nav a:hover { color: var(--primary); }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 80px 24px;
+            background: linear-gradient(135deg, #e8f0fe 0%, #d2e3fc 100%);
+        }
+        .hero h1 { font-size: 48px; font-weight: 700; margin-bottom: 16px; color: var(--text); }
+        .hero p { font-size: 20px; color: var(--text-secondary); max-width: 600px; margin: 0 auto 32px; }
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .btn:hover { background: var(--primary-dark); }
+
+        /* Features */
+        .features { padding: 80px 0; }
+        .features h2 { text-align: center; font-size: 32px; margin-bottom: 48px; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px; }
+        .feature-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+        }
+        .feature-card .icon { font-size: 40px; margin-bottom: 16px; }
+        .feature-card h3 { font-size: 18px; margin-bottom: 8px; }
+        .feature-card p { font-size: 14px; color: var(--text-secondary); }
+
+        /* How it works */
+        .how-it-works { padding: 80px 0; background: var(--card); }
+        .how-it-works h2 { text-align: center; font-size: 32px; margin-bottom: 48px; }
+        .steps { display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; }
+        .step { flex: 1; min-width: 200px; max-width: 280px; text-align: center; }
+        .step-number {
+            width: 48px; height: 48px; border-radius: 50%; background: var(--primary);
+            color: #fff; font-size: 20px; font-weight: 700; display: flex;
+            align-items: center; justify-content: center; margin: 0 auto 16px;
+        }
+        .step h3 { margin-bottom: 8px; font-size: 16px; }
+        .step p { font-size: 14px; color: var(--text-secondary); }
+
+        /* Footer */
+        footer {
+            background: var(--text);
+            color: #9aa0a6;
+            text-align: center;
+            padding: 32px 24px;
+            font-size: 14px;
+        }
+        footer a { color: #8ab4f8; text-decoration: none; margin: 0 12px; }
+        footer a:hover { text-decoration: underline; }
+        footer .links { margin-bottom: 12px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <a class="logo" href="/">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                <span>ThreadConnect</span>
+            </a>
+            <div>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>Connect Your Email Threads</h1>
+        <p>A Gmail add-on that links related email threads by matching shared IDs in subject lines. Forward replies and attachments in one click.</p>
+        <a class="btn" href="https://workspace.google.com/marketplace" target="_blank">Install from Marketplace</a>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <h2>Key Features</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="icon">🔗</div>
+                <h3>Smart ID Matching</h3>
+                <p>Automatically extracts shared IDs from subject lines using configurable patterns &mdash; numeric, alphanumeric, or character-based.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📧</div>
+                <h3>One-Click Reply</h3>
+                <p>Forward the latest message body and selected attachments to the matching output thread with a single click.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📝</div>
+                <h3>Reusable Templates</h3>
+                <p>Save keyword pairs, ID types, and search labels as templates. Load them instantly &mdash; no repetitive setup.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🛡️</div>
+                <h3>Built-in Safeguards</h3>
+                <p>Rate limiting, duplicate-send protection, and input validation keep your inbox safe from accidental spam.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📎</div>
+                <h3>Attachment Support</h3>
+                <p>Select which attachments to include when forwarding. All files transfer seamlessly between threads.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">⚡</div>
+                <h3>Fast &amp; Lightweight</h3>
+                <p>Runs entirely within Gmail &mdash; no external servers, no data leaves your Google account.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="how-it-works">
+    <div class="container">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Configure Keywords</h3>
+                <p>Set an input keyword, an output keyword, and the ID type to match in subject lines.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Open an Email</h3>
+                <p>Open any email whose subject contains the input keyword and a shared ID.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Review &amp; Send</h3>
+                <p>The add-on finds the matching output thread. Review the match, pick attachments, and hit Send.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="mailto:juanjolivares@gmail.com">Contact</a>
+    </div>
+    <p>&copy; 2026 ThreadConnect by Juan Olivar. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
